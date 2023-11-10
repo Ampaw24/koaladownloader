@@ -1,5 +1,4 @@
 // ignore_for_file: prefer_const_constructors
-
 import 'dart:async';
 import 'package:animated_text_kit/animated_text_kit.dart';
 import 'package:flutter/material.dart';
@@ -20,23 +19,23 @@ class SplashScreen extends StatefulWidget {
 class _SplashScreenState extends State<SplashScreen> {
   @override
   void initState() {
-    splashLoad();
+    _navigatehome();
     super.initState();
   }
 
-  Future<Timer> splashLoad() async {
-    return Timer(
-        // ignore: await_only_futures
-        await Duration(seconds:5),
-        () => Navigator.pushReplacement(
-      context,
-      PageTransition(
-        type: PageTransitionType.rightToLeftWithFade,
-        duration: Duration(milliseconds: 600),
-        child: MainView(),
-        inheritTheme: true,
-        ctx: context),
-));
+  _navigatehome() async {
+    await Future.delayed(
+      Duration(milliseconds: 5000),
+    );
+    () => Navigator.pushReplacement(
+          context,
+          PageTransition(
+              type: PageTransitionType.rightToLeftWithFade,
+              duration: Duration(milliseconds: 600),
+              child: MainView(),
+              inheritTheme: true,
+              ctx: context),
+        );
   }
 
   @override
