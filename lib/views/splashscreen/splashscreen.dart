@@ -9,37 +9,19 @@ import 'package:koalodownloader/specs/text.dart';
 import 'package:koalodownloader/views/mainview.dart';
 import 'package:page_transition/page_transition.dart';
 
-class SplashScreen extends StatefulWidget {
+class SplashScreen extends StatelessWidget {
   const SplashScreen({super.key});
 
   @override
-  State<SplashScreen> createState() => _SplashScreenState();
-}
-
-class _SplashScreenState extends State<SplashScreen> {
-  @override
-  void initState() {
-    _navigatehome();
-    super.initState();
-  }
-
-  _navigatehome() async {
-    await Future.delayed(
-      Duration(milliseconds: 5000),
-    );
-    () => Navigator.pushReplacement(
-          context,
-          PageTransition(
-              type: PageTransitionType.rightToLeftWithFade,
-              duration: Duration(milliseconds: 600),
-              child: MainView(),
-              inheritTheme: true,
-              ctx: context),
-        );
-  }
-
-  @override
   Widget build(BuildContext context) {
+    Future.delayed(Duration(seconds: 2), () {
+      // Navigate to the main screen after 2 seconds
+      Navigator.of(context).pushReplacement(
+        MaterialPageRoute(
+          builder: (context) => MainView(),
+        ),
+      );
+    });
     return Scaffold(
       backgroundColor: Colors.white,
       body: SafeArea(
