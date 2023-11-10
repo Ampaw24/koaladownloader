@@ -46,6 +46,16 @@ class _HomePageState extends State<HomePage> {
                         ),
                       ],
                       borderRadius: BorderRadius.circular(20)),
+                  child: Container(
+                    height: 40,
+                    width: 150,
+                    decoration: BoxDecoration(
+                        image: DecorationImage(
+                      image: AssetImage(
+                        "assets/shakebell.gif",
+                      ),
+                    )),
+                  ),
                 ),
                 Gap(20),
                 Container(
