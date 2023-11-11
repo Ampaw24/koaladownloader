@@ -14,6 +14,7 @@ class MainView extends StatefulWidget {
   @override
   State<MainView> createState() => _MainViewState();
 }
+
 int _selectedIndex = 0;
 const TextStyle optionStyle =
     TextStyle(fontSize: 30, fontWeight: FontWeight.w600);
@@ -55,11 +56,12 @@ class _MainViewState extends State<MainView> {
               padding:
                   const EdgeInsets.symmetric(horizontal: 15.0, vertical: 10),
               child: GNav(
-                rippleColor: Colors.grey[300]!,
+                rippleColor: colorMap['textRed'] as Color,
                 hoverColor: Colors.grey[100]!,
                 gap: 8,
                 activeColor: Colors.black,
                 iconSize: 24,
+                textSize: 20,
                 padding: EdgeInsets.symmetric(horizontal: 20, vertical: 12),
                 duration: Duration(milliseconds: 400),
                 tabBackgroundColor: Colors.grey[100]!,
@@ -73,7 +75,7 @@ class _MainViewState extends State<MainView> {
                     icon: Ionicons.settings_sharp,
                     text: 'Settings',
                   ),
-                    GButton(
+                  GButton(
                     icon: Ionicons.notifications,
                     text: 'Alerts',
                   ),
@@ -81,7 +83,6 @@ class _MainViewState extends State<MainView> {
                     icon: Ionicons.download,
                     text: 'Downloads',
                   ),
-                
                 ],
                 selectedIndex: _selectedIndex,
                 onTabChange: (index) {

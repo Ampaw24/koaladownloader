@@ -1,0 +1,36 @@
+{
+    "data": [
+        {
+            "grade": "Grade 1",
+            "value": 20
+        },
+        {
+            "grade": "Grade 2",
+            "value": 34
+        },
+        {
+            "grade": "Grade 3",
+            "value": 45
+        },
+        {
+            "grade": "Grade 4",
+            "value": 23
+        },
+        {
+            "grade": "Grade 5",
+            "value": 56
+        },
+        {
+            "grade": "Grade 6",
+            "value": 123
+        },
+        {
+            "grade": "Grade 7",
+            "value": 78
+        },
+        {
+            "grade": "Grade 8",
+            "value": 44
+        }
+    ]
+}
