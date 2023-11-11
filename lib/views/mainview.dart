@@ -14,14 +14,6 @@ class MainView extends StatefulWidget {
   @override
   State<MainView> createState() => _MainViewState();
 }
-
-final List<String> assetName = [
-  'assets/orange.png',
-  'assets/blue.png',
-  'assets/black.png',
-  'assets/p2black.png',
-  'assets/p2blue.png',
-];
 int _selectedIndex = 0;
 const TextStyle optionStyle =
     TextStyle(fontSize: 30, fontWeight: FontWeight.w600);
@@ -81,14 +73,15 @@ class _MainViewState extends State<MainView> {
                     icon: Ionicons.settings_sharp,
                     text: 'Settings',
                   ),
-                  GButton(
-                    icon: Ionicons.search,
-                    text: 'Search',
-                  ),
-                  GButton(
+                    GButton(
                     icon: Ionicons.notifications,
                     text: 'Alerts',
                   ),
+                  GButton(
+                    icon: Ionicons.download,
+                    text: 'Downloads',
+                  ),
+                
                 ],
                 selectedIndex: _selectedIndex,
                 onTabChange: (index) {
