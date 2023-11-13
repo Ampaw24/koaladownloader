@@ -9,6 +9,7 @@ import 'package:koalodownloader/provider/dropdownprovider.dart';
 import 'package:koalodownloader/specs/drop_down_widget.dart';
 import 'package:koalodownloader/specs/text.dart';
 import 'package:koalodownloader/specs/text_field.dart';
+import 'package:koalodownloader/widgets/buttonwid.dart';
 import 'package:provider/provider.dart';
 
 import '../specs/colors.dart';
@@ -172,41 +173,5 @@ class _HomePageState extends State<HomePage> {
         ),
       ),
     );
-  }
-}
-
-class ContainerButton extends StatelessWidget {
-  final Color btnColor;
-  final String btnName;
-  final IconData btnIcon;
-
-  const ContainerButton(
-      {super.key,
-      required this.btnColor,
-      required this.btnName,
-      required this.btnIcon});
-
-  @override
-  Widget build(BuildContext context) {
-    return Container(
-        height: 55,
-        width: MediaQuery.of(context).size.width * 0.84,
-        decoration: BoxDecoration(
-            color: btnColor, borderRadius: BorderRadius.circular(15)),
-        child: Row(
-          mainAxisAlignment: MainAxisAlignment.center,
-          children: [
-            Icon(
-              btnIcon,
-              color: Colors.white,
-              weight: 20,
-            ),
-            Gap(10),
-            Text(
-              btnName,
-              style: textStylespoppins(17, Colors.white, FontWeight.bold),
-            )
-          ],
-        ));
   }
 }
