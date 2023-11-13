@@ -46,6 +46,7 @@ Widget textFormField({
   return SizedBox(
     width: width,
     child: TextFormField(
+      
       onTap: function,
       readOnly: readOnly,
       enableInteractiveSelection: true,
